@@ -16,7 +16,6 @@ import './pixelated-scene';
 import './sprite-font';
 import './title-scene';
 import './main-scene';
-import './end-scene';
 
 phina.main(function() {
   var app = GameApp({
