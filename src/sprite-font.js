@@ -15,12 +15,6 @@ phina.define('SpriteFont', {
   },
 
   draw(canvas) {
-    const context = canvas.context;
-    context.imageSmoothingEnabled = false;
-    context.webkitImageSmoothingEnabled = false;
-    context.mozImageSmoothingEnabled = false;
-    context.msImageSmoothingEnabled = false;
-
     const charW = this.charWidth;
     const charH = this.charHeight;
     const scale = this.scale;

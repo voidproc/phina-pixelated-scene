@@ -17,11 +17,14 @@ phina.define('PixelatedScene', {
 
     this.option = option;
     
-    const context = this.canvas.context;
-    context.imageSmoothingEnabled = false;
-    context.webkitImageSmoothingEnabled = false;
-    context.mozImageSmoothingEnabled = false;
-    context.msImageSmoothingEnabled = false;
+    const disableImageSmoothing = context => {
+      context.imageSmoothingEnabled = false;
+      context.webkitImageSmoothingEnabled = false;
+      context.mozImageSmoothingEnabled = false;
+      context.msImageSmoothingEnabled = false;
+    };
+    disableImageSmoothing(this.canvas.context);
+    disableImageSmoothing(this.display.canvas.context);
   },
   
   _render: function() {
