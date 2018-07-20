@@ -1,0 +1,19 @@
+{
+  "name": "phina-pixelated-scene",
+  "version": "1.0.0",
+  "description": "",
+  "author": "voidProc",
+  "private": true,
+  "scripts": {
+    "dev": "node fuse.js",
+    "build": "node fuse.js dist"
+  },
+  "dependencies": {
+    "phina.js": "git+https://github.com/phinajs/phina.js.git#develop"
+  },
+  "devDependencies": {
+    "fuse-box": "^3.4.0",
+    "typescript": "^2.9.2",
+    "uglify-es": "^3.3.9"
+  }
+}
