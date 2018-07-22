@@ -50,6 +50,8 @@ phina.main(function () {
 
 [Live example](https://voidproc.com/phina-pixelated-scene-example/)
 
+![example2](https://raw.githubusercontent.com/voidproc/phina-pixelated-scene/rdm/readme/example2.gif)
+
 
 ### Install npm packages
 
