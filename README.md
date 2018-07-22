@@ -48,6 +48,9 @@ phina.main(function () {
 
 ## Example app usage
 
+[Live example](https://voidproc.com/phina-pixelated-scene-example/)
+
+
 ### Install npm packages
 
 ```
