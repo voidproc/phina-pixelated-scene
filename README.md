@@ -65,7 +65,7 @@ $ npm run dev
 ### Generate files in production mode
 
 ```
-$ npm run dist
+$ npm run build
 ```
 
 ### 🐳 with Docker
