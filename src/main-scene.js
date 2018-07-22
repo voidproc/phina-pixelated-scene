@@ -52,10 +52,10 @@ phina.define('MainScene', {
       charWidth: 4,
       charHeight: 6,
     })
-      .addChildTo(this.display)
+      .addChildTo(this)
       .setPosition(1, 1);
 
-    this.rects = DisplayElement().addChildTo(this.display);
+    this.rects = DisplayElement().addChildTo(this);
   },
 
   update: function() {

@@ -6,7 +6,7 @@ Crisp pixelart style appearance in [phina.js](https://github.com/phinajs/phina.j
 
 See [pixelated-scene.js](https://raw.githubusercontent.com/voidproc/phina-pixelated-scene/rdm/readme/pixelated-scene.js) .
 
-Use `PixelatedScene` instead of `DisplayScene`, and pass `this.display` as addChildTo() argument.
+Use `PixelatedScene` instead of `DisplayScene` .
 
 ### Example
 
@@ -26,7 +26,7 @@ phina.define('MainScene', {
     this.rect = RectangleShape({
         width: 40, height: 40, stroke: 'transparent', fill: 'red'
       })
-      .addChildTo(this.display)
+      .addChildTo(this)
       .setPosition(50, 50);
   },
 

@@ -4,19 +4,36 @@ import { CONFIG } from './config';
 phina.define('PixelatedScene', {
   superClass: 'DisplayScene',
 
-  init: function (option) {
+  init(option) {
+    if (!option) {
+      option = {};
+    }
+    if (!option.width) {
+      option.width = CONFIG.width;
+    }
+    if (!option.height) {
+      option.height = CONFIG.height;
+    }
+    if (!option.scale) {
+      option.scale = CONFIG.scale;
+    }
+    if (!option.backgroundColor) {
+      option.backgroundColor = 'white';
+    }
+
     this.superInit({
-      width: CONFIG.width * CONFIG.scale,
-      height: CONFIG.height * CONFIG.scale,
+      width: option.width * option.scale,
+      height: option.height * option.scale,
     });
 
     this.display = CanvasLayer({
-      width: CONFIG.width,
-      height: CONFIG.height,
-    }).addChildTo(this);
+      width: option.width,
+      height: option.height,
+    });
 
     this.option = option;
-
+    this.backgroundColor = option.backgroundColor;
+    
     const disableImageSmoothing = context => {
       context.imageSmoothingEnabled = false;
       context.webkitImageSmoothingEnabled = false;
@@ -26,12 +43,15 @@ phina.define('PixelatedScene', {
     disableImageSmoothing(this.canvas.context);
     disableImageSmoothing(this.display.canvas.context);
   },
+  
+  _render() {
+    this.display.renderer.render(this);
 
-  _render: function () {
-    this.canvas.clearColor(this.option.backgroundColor || 'white');
+    const opt = this.option;
     this.canvas.context.drawImage(
       this.display.canvas.domElement,
-      0, 0, CONFIG.width, CONFIG.height,
-      0, 0, CONFIG.width * CONFIG.scale, CONFIG.height * CONFIG.scale);
+      0, 0, opt.width, opt.height,
+      0, 0, opt.width * opt.scale, opt.height * opt.scale);
   },
+
 });

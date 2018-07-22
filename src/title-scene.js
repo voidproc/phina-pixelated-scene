@@ -16,7 +16,7 @@ phina.define('TitleScene', {
       charHeight: 6,
       scale: 1,
     })
-      .addChildTo(this.display)
+      .addChildTo(this)
       .setPosition(CONFIG.width / 2 - 4 * 14/2, CONFIG.height / 2 - 6 / 2);
   },
 
