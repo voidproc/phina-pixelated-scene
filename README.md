@@ -12,6 +12,8 @@ Use `PixelatedScene` instead of `DisplayScene`, and pass `this.display` as addCh
 
 [Live example (Runstant.com)](http://runstant.com/voidproc/projects/ad6d270d)
 
+![example](https://raw.githubusercontent.com/voidproc/phina-pixelated-scene/rdm/readme/example.gif)
+
 ```
 phina.define('MainScene', {
   superClass: 'PixelatedScene',
