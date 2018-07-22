@@ -14,26 +14,26 @@ Use `PixelatedScene` instead of `DisplayScene`, and pass `this.display` as addCh
 
 ```
 phina.define('MainScene', {
-    superClass: 'PixelatedScene',
+  superClass: 'PixelatedScene',
 
-    init: function(option) {
-        this.superInit({
-            width: 100, height: 100, backgroundColor: 'black'
-        });
+  init: function (option) {
+    this.superInit({
+      width: 100, height: 100, backgroundColor: 'black'
+    });
 
-        this.rect = RectangleShape({
-                width: 40, height: 40, stroke: 'transparent', fill: 'red'
-            })
-            .addChildTo(this.display)
-            .setPosition(50, 50);
-    },
+    this.rect = RectangleShape({
+        width: 40, height: 40, stroke: 'transparent', fill: 'red'
+      })
+      .addChildTo(this.display)
+      .setPosition(50, 50);
+  },
 
-    update: function() {
-        this.rect.rotation += 2;
-    }
+  update: function () {
+    this.rect.rotation += 2;
+  }
 });
 
-phina.main(function() {
+phina.main(function () {
   var app = GameApp({
     startLabel: 'main',
     width: 100 * 4,
