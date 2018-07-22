@@ -16,23 +16,24 @@ Use `PixelatedScene` instead of `DisplayScene` .
 
 ```
 phina.define('MainScene', {
-  superClass: 'PixelatedScene',
+    superClass: 'PixelatedScene',
 
-  init: function (option) {
-    this.superInit({
-      width: 100, height: 100, backgroundColor: 'black'
-    });
+    init: function(option) {
+        this.superInit({
+            width: WIDTH, height: HEIGHT, scale: SCALE, backgroundColor: 'black'
+        });
 
-    this.rect = RectangleShape({
-        width: 40, height: 40, stroke: 'transparent', fill: 'red'
-      })
-      .addChildTo(this)
-      .setPosition(50, 50);
-  },
+        this.rect = RectangleShape({
+            width: 40, height: 40, stroke: 'transparent', fill: 'red'
+        });
+        this.rect
+            .addChildTo(this)
+            .setPosition(this.gridX.center(), this.gridY.center());
+    },
 
-  update: function () {
-    this.rect.rotation += 2;
-  }
+    update: function() {
+        this.rect.rotation += 0.5;
+    }
 });
 
 phina.main(function () {
