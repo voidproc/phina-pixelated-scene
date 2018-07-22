@@ -7,6 +7,9 @@ phina.define('PixelatedScene', {
       height: option.height * option.scale,
     });
 
+    this.gridX = phina.util.Grid(option.width, 16);
+    this.gridY = phina.util.Grid(option.height, 16);
+
     this.display = CanvasLayer({
       width: option.width,
       height: option.height,
