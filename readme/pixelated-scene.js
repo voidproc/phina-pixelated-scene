@@ -14,7 +14,7 @@ phina.define('PixelatedScene', {
 
     this.option = option;
     
-    const disableImageSmoothing = context => {
+    var disableImageSmoothing = function(context) {
       context.imageSmoothingEnabled = false;
       context.webkitImageSmoothingEnabled = false;
       context.mozImageSmoothingEnabled = false;
@@ -25,7 +25,7 @@ phina.define('PixelatedScene', {
   },
   
   _render: function() {
-    const opt = this.option;
+    var opt = this.option;
     this.canvas.clearColor(opt.backgroundColor || 'white');
     this.canvas.context.drawImage(
       this.display.canvas.domElement,
