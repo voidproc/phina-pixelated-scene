@@ -52,15 +52,16 @@ phina.define('MainScene', {
       charWidth: 4,
       charHeight: 6,
     })
-      .addChildTo(this)
-      .setPosition(1, 1);
+      .addChildTo(this);
+    this.spriteFont
+      .setPosition(this.gridX.center() - this.spriteFont.charWidth / 2, this.gridY.center() - this.spriteFont.charHeight / 2);
 
     this.rects = DisplayElement().addChildTo(this);
   },
 
   update: function() {
-    this.cnt = (this.cnt || 0) + 1;
     this.spriteFont.text = this.rects.children.length + '';
+    this.spriteFont.x = this.gridX.center() - this.spriteFont.text.length * this.spriteFont.charWidth / 2;
 
     for (let i=0; i<4; i++)
       Obj({ r: Random.randfloat(0.5, 3), theta: Random.randfloat(0, 2 * 3.14) })
