@@ -12,7 +12,7 @@
     "phina.js": "git+https://github.com/phinajs/phina.js.git#develop"
   },
   "devDependencies": {
-    "fuse-box": "^3.4.0",
+    "fuse-box": "^4.0.0",
     "typescript": "^3.8.2",
     "uglify-es": "^3.3.9"
   }

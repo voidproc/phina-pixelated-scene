@@ -1,6 +1,9 @@
 node_modules/
 .fusebox/
-dist/js/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.cache/
+dist/index.html
+dist/manifest-browser.json
+dist/js/
