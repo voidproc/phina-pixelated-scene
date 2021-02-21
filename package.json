@@ -5,8 +5,7 @@
   "author": "voidProc",
   "private": true,
   "scripts": {
-    "dev": "node fuse.js",
-    "build": "node fuse.js dist"
+    "dev": "node fuse.js"
   },
   "dependencies": {
     "phina.js": "git+https://github.com/phinajs/phina.js.git#develop"

@@ -68,12 +68,6 @@ or yarn available.
 $ npm run dev
 ```
 
-### Generate files in production mode
-
-```
-$ npm run build
-```
-
 ### 🐳 with Docker
 
 ```
