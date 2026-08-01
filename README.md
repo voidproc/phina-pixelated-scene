@@ -1,3 +1,6 @@
+[!WARNING]
+This repository uses an outdated phina.js environment and is no longer maintained. Its dependencies may contain known security vulnerabilities.
+
 # phina-pixelated-scene
 
 Crisp pixelart style appearance in [phina.js](https://github.com/phinajs/phina.js) product.
@@ -9,8 +12,6 @@ See [pixelated-scene.js](https://raw.githubusercontent.com/voidproc/phina-pixela
 Use `PixelatedScene` instead of `DisplayScene` .
 
 ### Example
-
-[Live example (Runstant.com)](http://runstant.com/voidproc/projects/ad6d270d)
 
 ![example](https://raw.githubusercontent.com/voidproc/phina-pixelated-scene/rdm/readme/example.gif)
 
