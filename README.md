@@ -1,5 +1,5 @@
-[!WARNING]
-This repository uses an outdated phina.js environment and is no longer maintained. Its dependencies may contain known security vulnerabilities.
+> [!WARNING]
+> This repository uses an outdated phina.js environment and is no longer maintained. Its dependencies may contain known security vulnerabilities.
 
 # phina-pixelated-scene
 
